@@ -4,6 +4,50 @@ html{
   color: #da9f87;
   color: #ffe3d7;
   color: #201c27;
+  
+  color: #201c27;
   background-color: #da9f87;
 }
 
+:root{
+  --heading: "Josefin Sans", sans-serif;
+  --para: "Quattrocento", serif;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  height: 1000px;
+  font-family: var(--heading);
+  font-family: var(----para);
+  font-weight: 400;
+  font-style: normal;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 30px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  
+  background-color: #ffe3d7;
+}
+
+.left-section{
+  font-size: 20px;
+}
+
+.right-section .navBtns{
+  background: none;
+  border: none;
+  cursor:  pointer;
+  margin: 0px 10px;
+  font-size: 25px;
+}
