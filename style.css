@@ -3,6 +3,7 @@ html{
   color: #8aa191;
   color: #da9f87;
   color: #ffe3d7;
+  color: #fffefe;
   color: #201c27;
   
   color: #201c27;
@@ -37,17 +38,71 @@ nav{
   right: 0;
   left: 0;
   
-  background-color: #ffe3d7;
+  background-color: #fffefe;
 }
 
 .left-section{
   font-size: 20px;
 }
 
-.right-section .navBtns{
+.right-section .navBtn{
   background: none;
   border: none;
   cursor:  pointer;
   margin: 0px 10px;
   font-size: 25px;
+  color: #201c27;
+  position: relative;
+  z-index: 1;
+}
+
+.menu{
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #ffe3d7;
+  z-index: 0;
+
+  height: 320px;
+  width: 220px;
+}
+
+.menu .menu-buttons{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  margin: 120px 0px 0px 24px;
+}
+.menuBtn {
+  position: relative;
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(32, 28, 39, 0.5);
+  cursor: pointer;
+  margin-top: 24px;
+  transition: all 0.3s;
+}
+.menuBtn:hover{
+  color: rgb(32, 28, 39);
+  padding-left: 10px;
+}
+.menuBtn::before {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 4px;
+  background-color: #201c27;
+  top: 50%;
+  left: -10px;
+  transform: translateY(-50%) scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+  border-radius: 50;
+}
+
+.menuBtn:hover::before {
+  transform: translateY(-50%) scaleX(1);
 }
