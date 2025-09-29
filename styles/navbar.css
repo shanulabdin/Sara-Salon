@@ -5,14 +5,11 @@ html{
   color: #ffe3d7;
   color: #fffefe;
   color: #201c27;
-  
-  color: #201c27;
-  background-color: #da9f87;
 }
 
 :root{
-  --heading: "Josefin Sans", sans-serif;
-  --para: "Quattrocento", serif;
+  --para: "Josefin Sans", sans-serif;
+  --heading: "Quattrocento", serif;
 }
 
 *{
@@ -22,10 +19,9 @@ html{
 
 body{
   height: 1000px;
-  font-family: var(--heading);
-  font-family: var(----para);
   font-weight: 400;
   font-style: normal;
+  background-color: #da9f87;
 }
 
 nav{
@@ -38,11 +34,13 @@ nav{
   right: 0;
   left: 0;
   
+  color: #201c27;
   background-color: #fffefe;
 }
 
 .left-section{
   font-size: 20px;
+  font-family: var(--heading);
 }
 
 .right-section .navBtn{
@@ -50,10 +48,27 @@ nav{
   border: none;
   cursor:  pointer;
   margin: 0px 10px;
-  font-size: 25px;
+  font-size: 30px;
+  height: 30px;
   color: #201c27;
   position: relative;
   z-index: 1;
+
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.menu-button{
+  display: block;
+}
+.menu-button.active{
+  display: none;
+}
+.close-button{
+  display: none;
+}
+.close-button.active{
+  display: block;
 }
 
 .menu{
@@ -85,6 +100,7 @@ nav{
   position: relative;
   background: transparent;
   border: none;
+  font-family: var(--para);
   font-size: 14px;
   font-weight: 600;
   color: rgba(32, 28, 39, 0.5);
