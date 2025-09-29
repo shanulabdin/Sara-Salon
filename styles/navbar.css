@@ -12,10 +12,7 @@ html{
   --heading: "Quattrocento", serif;
 }
 
-*{
-  margin: 0;
-  padding: 0;
-}
+*{ margin: 0; padding: 0; }
 
 body{
   height: 1000px;
@@ -24,16 +21,14 @@ body{
   background-color: #da9f87;
 }
 
+/* NAV */
 nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 40px 30px;
   position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  
+  top: 0; right: 0; left: 0;
   color: #201c27;
   background-color: #fffefe;
 }
@@ -46,31 +41,54 @@ nav{
 .right-section .navBtn{
   background: none;
   border: none;
-  cursor:  pointer;
-  margin: 0px 10px;
+  cursor: pointer;
+  margin: 0 10px;
   font-size: 30px;
   height: 30px;
   color: #201c27;
   position: relative;
   z-index: 1;
-
   line-height: 1;
   vertical-align: middle;
+
+  /* make it easier to click without layout shifts */
+  width: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.menu-button{
-  display: block;
-}
-.menu-button.active{
-  display: none;
-}
-.close-button{
-  display: none;
-}
-.close-button.active{
-  display: block;
+/* -- ICON SWAP (fade instead of display) -- */
+.menu-toggle { position: relative; }
+.menu-toggle ion-icon{
+  position: absolute;
+  inset: 0;           /* center in the button */
+  margin: auto;
+  pointer-events: none;
+  transition: opacity .25s ease, transform .25s ease;
 }
 
+/* default: show menu, hide close (with animation) */
+.menu-toggle .menu-button { 
+  opacity: 1; 
+  transform: scale(1); 
+}
+.menu-toggle .close-button { 
+  opacity: 0; 
+  transform: scale(.8); 
+}
+
+/* active: swap smoothly */
+.menu-toggle.active .menu-button {
+  opacity: 0; 
+  transform: scale(.8); 
+}
+.menu-toggle.active .close-button {
+  opacity: 1; 
+  transform: scale(1); 
+}
+
+/* MENU PANEL */
 .menu{
   position: fixed;
   top: 0;
@@ -79,23 +97,27 @@ nav{
   z-index: 0;
   height: 320px;
   width: 220px;
+
   opacity: 0;
   visibility: hidden;
-  transition: all 0.3s ease;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 .menu.active{
   opacity: 1;
   visibility: visible;
-  transition: all 0.3s ease;
+  pointer-events: auto;
 }
 
+/* Menu buttons inside panel */
 .menu .menu-buttons{
   display: flex;
   justify-content: center;
-  align-items: start;
+  align-items: flex-start;
   flex-direction: column;
-  margin: 120px 0px 0px 24px;
+  margin: 120px 0 0 24px;
 }
+
 .menuBtn {
   position: relative;
   background: transparent;
@@ -106,26 +128,38 @@ nav{
   color: rgba(32, 28, 39, 0.5);
   cursor: pointer;
   margin-top: 24px;
-  transition: all 0.3s;
+  transition: color 0.3s, padding 0.3s;
 }
+
 .menuBtn:hover{
   color: rgb(32, 28, 39);
   padding-left: 10px;
 }
+
 .menuBtn::before {
   content: '';
   position: absolute;
   width: 12px;
   height: 4px;
   background-color: #201c27;
-  top: 50%;
+  top: 50%;                 /* centered vertically */
   left: -10px;
   transform: translateY(-50%) scaleX(0);
   transform-origin: left;
   transition: transform 0.3s;
-  border-radius: 50;
+  border-radius: 50px;
 }
 
 .menuBtn:hover::before {
   transform: translateY(-50%) scaleX(1);
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .menu-toggle ion-icon,
+  .menu,
+  .menuBtn,
+  .menuBtn::before {
+    transition: none !important;
+  }
 }
