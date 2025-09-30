@@ -1,0 +1,27 @@
+colors{
+  color: #01573d;
+  color: #8aa191;
+  color: #da9f87;
+  color: #ffe3d7;
+  color: #fffefe;
+  color: #201c27;
+  
+  color: #6F4E37;
+  color: #A67B5B;
+  color: #ECB176;
+  color: #FED8B1;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  height: 3000px;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #3d3d3d;
+}
+
+#about {
+  scroll-margin-top: 110px;
+}
