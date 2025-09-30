@@ -1,9 +1,26 @@
+colors{
+  color: #01573d;
+  color: #8aa191;
+  color: #da9f87;
+  color: #ffe3d7;
+  color: #fffefe;
+  color: #201c27;
+  
+  color: #6F4E37;
+  color: #A67B5B;
+  color: #ECB176;
+  color: #FED8B1;
+}
+
 :root{
   --para: "Josefin Sans", sans-serif;
   --heading: "Quattrocento", serif;
 }
 
-*{ margin: 0; padding: 0; }
+*{ 
+  margin: 0; 
+  padding: 0; 
+}
 
 
 /* NAV */
@@ -15,11 +32,14 @@ nav{
   position: fixed;
   top: 0; right: 0; left: 0;
   color: #201c27;
-  background-color: #fffefe;
+  background-color: transparent;
+  /* background-color: #fffefe; */
+  z-index: 1;
 }
 
 .left-section{
   font-size: 20px;
+  font-weight: 600;
   font-family: var(--heading);
 }
 
@@ -80,7 +100,7 @@ nav{
   position: fixed;
   top: 0;
   right: 0;
-  background-color: #ffe3d7;
+  background-color: #A67B5B;
   z-index: 0;
   height: 320px;
   width: 220px;
@@ -112,14 +132,14 @@ nav{
   font-family: var(--para);
   font-size: 14px;
   font-weight: 600;
-  color: rgba(32, 28, 39, 0.5);
+  color: #FED8B1;
   cursor: pointer;
   margin-top: 24px;
   transition: color 0.3s, padding 0.3s;
 }
 
 .menuBtn:hover{
-  color: rgb(32, 28, 39);
+  color: #201c27;
   padding-left: 10px;
 }
 
