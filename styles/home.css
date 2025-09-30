@@ -11,15 +11,19 @@ colors{
   color: #ECB176;
   color: #FED8B1;
 }
+html{
+  scroll-behavior: smooth;
+}
 
 body{
   height: 3000px;
   font-weight: 400;
   font-style: normal;
+  background-color: #3d3d3d;
 }
 
 #main{
-  background-color: #6F4E37;
+  background-color: #b9835c;
   position: relative;
   top: 50vh;
   left: 0;
@@ -38,6 +42,7 @@ body{
   justify-content: center;
   align-items: center;
   height: 50vh;
+  background-color: #6F4E37;
 }
 h1{
   font-size: 50px;
@@ -46,4 +51,36 @@ h1{
   text-align: center;
   width: 300px;
   color: #FED8B1;
+}
+
+.scrollBtn{
+  position: absolute;
+  top: -32px;
+  
+  background: transparent;
+  font-size: 30px;
+  color: #FED8B1;
+  cursor: pointer;
+
+  border-width: 1px;
+  border-style: solid;
+  border-color: #FED8B1;
+  border-radius: 25px 25px 0px 0px;
+  padding: 10px 10px 0px 10px;
+  animation: scroll 2s infinite;
+}
+@keyframes scroll{
+  0%, 100%{
+    top: -32px;
+  }
+  45%{
+    top: -44px;
+  }
+  55%{
+    top: -32px;
+  }
+}
+
+#about {
+  scroll-margin-top: 110px; /* ← use your nav height here */
 }
