@@ -33,10 +33,24 @@ nav{
   top: 0; right: 0; left: 0;
   color: #201c27;
   background-color: transparent;
-  /* background-color: #fffefe; */
+  
+  position: fixed;
   z-index: 1;
+  overflow: hidden;
 }
-
+nav::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: #FED8B1;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+nav.scrolled::before {
+  transform: scaleY(1)
+}
 .left-section{
   font-size: 20px;
   font-weight: 600;
