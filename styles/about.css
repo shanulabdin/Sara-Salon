@@ -24,4 +24,27 @@ body{
 
 #about {
   scroll-margin-top: 110px;
+  font-family: "Josefin Sans", sans-serif;
+  padding: 40px 10px 10px 10px;
+  height: 82vh;
+  background-color: #6F4E37;
+  color: #FED8B1;
+}
+.text-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#about h1{
+  font-size: 50px;
+  font-weight: 800;
+  font-family: "Cormorant Garamond", serif;
+  text-align: center;
+  width: 300px;
+}
+#about p{
+  padding: 40px 20px 10px 20px;
+  line-height: 20px;
+  font-size: 15px;
 }
