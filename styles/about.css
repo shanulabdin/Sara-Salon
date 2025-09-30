@@ -44,7 +44,15 @@ body{
   width: 300px;
 }
 #about p{
-  padding: 40px 20px 10px 20px;
+  padding: 10px 30px;
+  margin-top: 30px;
   line-height: 20px;
   font-size: 15px;
+}
+#about img{
+  margin-top: 30px;
+  height: 200px;
+}
+#about img{
+  border: 1px solid wheat;
 }
