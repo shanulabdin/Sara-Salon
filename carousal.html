@@ -52,6 +52,10 @@
       object-fit: cover;
       margin-left: 14px;
       width: calc(100% / 3);
+
+      user-select: none;       /* Prevent text/image selection */
+      -webkit-user-drag: none; /* Disable default image drag behavior in Chrome/Safari */
+      pointer-events: none;    /* (Optional) Makes drag smoother by ignoring image clicks */
     }
     .carousel img:first-child{
       margin-left: 0px;
@@ -63,15 +67,44 @@
   <div class="wrapper">
     <ion-icon class="i" name="chevron-back-outline"></ion-icon>
     <div class="carousel">
-      <img src="images/img-1.jpg" alt="img">
-      <img src="images/img-2.jpg" alt="img">
-      <img src="images/img-3.jpg" alt="img">
-      <img src="images/img-4.jpg" alt="img">
-      <img src="images/img-5.jpg" alt="img">
+      <img src="images/img-1.jpg" alt="img" draggable="false">
+      <img src="images/img-2.jpg" alt="img" draggable="false">
+      <img src="images/img-3.jpg" alt="img" draggable="false">
+      <img src="images/img-4.jpg" alt="img" draggable="false">
+      <img src="images/img-5.jpg" alt="img" draggable="false">
     </div>
     <ion-icon class="i" name="chevron-forward-outline"></ion-icon>
 
   </div>
+
+  <script>
+    const carousel = document.querySelector('.carousel');
+
+    let isDragStart = false, prevPageX, prevScrollLeft;
+
+    const dragStart = (e) => {
+      // updating global variables value on mouse down event
+      isDragStart = true;
+      prevPageX = e.pageX;
+      prevScrollLeft = carousel.scrollLeft;
+    }
+
+    const dragging = (e) => {
+      // scrolling images to left according to pointer
+      if(!isDragStart) return;
+      e.preventDefault();
+      let positionDiff = e.pageX - prevPageX;
+      carousel.scrollLeft = prevScrollLeft - positionDiff;
+    }
+
+    const dragStop = () => {
+      isDragStart = false;
+    }
+
+    carousel.addEventListener('mousedown', dragStart)
+    carousel.addEventListener('mousemove', dragging)
+    carousel.addEventListener('mouseup', dragStop)
+  </script>
 
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
