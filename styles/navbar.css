@@ -14,7 +14,7 @@ colors{
 
 :root{
   --para: "Josefin Sans", sans-serif;
-  --heading: "Quattrocento", serif;
+  --heading: "Julius Sans One", serif;
 }
 
 *{ 
@@ -147,8 +147,9 @@ nav.scrolled::before {
   font-size: 14px;
   font-weight: 600;
   color: #FED8B1;
+  height: 24px;
   cursor: pointer;
-  margin-top: 24px;
+  margin-top: 20px;
   transition: color 0.3s, padding 0.3s;
 }
 

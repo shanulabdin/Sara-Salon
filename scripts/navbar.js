@@ -8,20 +8,11 @@ menuToggle.addEventListener('click', () => {
 
 
 // navbar appearing on scroll 
+// simplest & snappiest
 const nav = document.querySelector('nav');
-const home = document.querySelector('#home');
 
-const navHeight = nav.getBoundingClientRect().height;
-
-const observer = new IntersectionObserver(
-  ([entry]) => {
-    nav.classList.toggle('scrolled', !entry.isIntersecting);
-  },
-  {
-    root: null,
-    threshold: 0,
-    rootMargin: `-${navHeight}px 0px 0px 0px`
-  }
-);
-
-observer.observe(home)
+const onScroll = () => {
+  nav.classList.toggle('scrolled', window.scrollY > 360);
+};
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();

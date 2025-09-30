@@ -33,3 +33,17 @@ body{
   left: -10vw;
   z-index: 0;
 }
+#home{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+h1{
+  font-size: 50px;
+  font-weight: 100;
+  font-family: "Cormorant Garamond", serif;
+  text-align: center;
+  width: 300px;
+  color: #FED8B1;
+}
