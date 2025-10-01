@@ -1,5 +1,14 @@
+@media (min-width: 300px) and (max-width: 999px){
+  #services {
+    scroll-margin-top: 110px;
+  }
+}
+@media (min-width: 1000px) and (max-width: 3000px){
+  #services {
+    scroll-margin-top: 0px;
+  }
+}
 #services {
-  scroll-margin-top: 110px;
   font-family: "Josefin Sans", sans-serif;
   padding: 40px 10px 40px 10px;
   background-color: #d4a97d;
@@ -61,4 +70,11 @@
 
 .menuBtn:hover::before {
   transform: translateY(-50%) scaleX(1);
+}
+
+@media (min-width: 1000px) and (max-width: 3000px){
+  #services {
+    scroll-margin-top: 0px;
+
+  }
 }

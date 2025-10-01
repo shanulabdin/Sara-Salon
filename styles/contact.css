@@ -1,5 +1,15 @@
+@media (min-width: 300px) and (max-width: 999px){
+  #contact {
+    scroll-margin-top: -300px;
+  }
+}
+@media (min-width: 1000px) and (max-width: 3000px){
+  #contact {
+    scroll-margin-top: -500px;
+  }
+}
+
 #contact{
-  scroll-margin-top: 110px;
   font-family: "Josefin Sans", sans-serif;
   color: #201c27;
   background-color: #EED5B6;

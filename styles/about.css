@@ -1,5 +1,15 @@
+@media (min-width: 300px) and (max-width: 999px){
+  #about {
+    scroll-margin-top: 110px;
+  }
+}
+@media (min-width: 1000px) and (max-width: 3000px){
+  #about {
+    scroll-margin-top: 0px;
+  }
+}
+
 #about {
-  scroll-margin-top: 110px;
   font-family: "Josefin Sans", sans-serif;
   padding: 40px 10px 40px 10px;
   background-color: #6F4E37;
