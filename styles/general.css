@@ -29,6 +29,7 @@ html{
     bottom: -10vh;
     bottom: -10dvh;
     z-index: 0;
+    transform: scaleX(-1);
   }
 
   #main{

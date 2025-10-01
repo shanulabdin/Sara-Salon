@@ -1,165 +1,293 @@
 /* NAV */
-nav{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px 30px;
-  position: fixed;
-  top: 0; right: 0; left: 0;
-  color: #201c27;
-  background-color: transparent;
-  
-  position: fixed;
-  z-index: 1;
-  overflow: hidden;
-}
-nav::before{
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-color: #FED8B1;
-  transform: scaleY(0);
-  transform-origin: top;
-  transition: transform 0.3s ease;
-  z-index: -1;
-  box-shadow: 1px 1px 2px #000000ec;
-}
-nav.scrolled::before {
-  transform: scaleY(1)
-}
-.left-section{
-  font-size: 20px;
-  font-weight: 800;
-  font-family: "Julius Sans One", serif;
-}
+@media (min-width: 300px) and (max-width: 999px){
+  nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 30px;
+    position: fixed;
+    top: 0; right: 0; left: 0;
+    color: #201c27;
+    background-color: transparent;
+    
+    position: fixed;
+    z-index: 1;
+    overflow: hidden;
+  }
+  nav::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: #FED8B1;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease;
+    z-index: -1;
+    box-shadow: 1px 1px 2px #000000ec;
+  }
+  nav.scrolled::before {
+    transform: scaleY(1)
+  }
+  .left-section{
+    font-size: 20px;
+    font-weight: 800;
+    font-family: "Julius Sans One", serif;
+  }
 
 
-.right-section .navBtn{
-  background: none;
-  border: none;
-  cursor: pointer;
-  margin: 0 10px;
-  font-size: 30px;
-  height: 30px;
-  color: #201c27;
-  position: relative;
-  z-index: 1;
-  line-height: 1;
-  vertical-align: middle;
+  .right-section .navBtn{
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 10px;
+    font-size: 30px;
+    height: 30px;
+    color: #201c27;
+    position: relative;
+    z-index: 1;
+    line-height: 1;
+    vertical-align: middle;
 
-  /* make it easier to click without layout shifts */
-  width: 32px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
+    /* make it easier to click without layout shifts */
+    width: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-/* -- ICON SWAP (fade instead of display) -- */
-.menu-toggle { 
-  position: relative; 
-}
-.menu-toggle ion-icon{
-  position: absolute;
-  inset: 0;           /* center in the button */
-  margin: auto;
-  pointer-events: none;
-  transition: opacity .25s ease, transform .25s ease;
-}
+  /* -- ICON SWAP (fade instead of display) -- */
+  .menu-toggle { 
+    position: relative; 
+  }
+  .menu-toggle ion-icon{
+    position: absolute;
+    inset: 0;           /* center in the button */
+    margin: auto;
+    pointer-events: none;
+    transition: opacity .25s ease, transform .25s ease;
+  }
 
-/* default: show menu, hide close (with animation) */
-.menu-toggle .menu-button { 
-  opacity: 1; 
-  transform: scale(1); 
-}
-.menu-toggle .close-button { 
-  opacity: 0; 
-  transform: scale(.8); 
-}
+  /* default: show menu, hide close (with animation) */
+  .menu-toggle .menu-button { 
+    opacity: 1; 
+    transform: scale(1); 
+  }
+  .menu-toggle .close-button { 
+    opacity: 0; 
+    transform: scale(.8); 
+  }
 
-/* active: swap smoothly */
-.menu-toggle.active .menu-button {
-  opacity: 0; 
-  transform: scale(.8); 
-}
-.menu-toggle.active .close-button {
-  opacity: 1; 
-  transform: scale(1); 
-}
+  /* active: swap smoothly */
+  .menu-toggle.active .menu-button {
+    opacity: 0; 
+    transform: scale(.8); 
+  }
+  .menu-toggle.active .close-button {
+    opacity: 1; 
+    transform: scale(1); 
+  }
 
-/* MENU PANEL */
-.menu{
-  position: fixed;
-  top: 0;
-  right: 0;
-  background-color: #A67B5B;
-  z-index: 0;
-  height: 320px;
-  width: 220px;
-  border-radius: 0px 0px 0px 30px;
+  /* MENU PANEL */
+  .menu{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #A67B5B;
+    z-index: 0;
+    height: 320px;
+    width: 220px;
+    border-radius: 0px 0px 0px 30px;
 
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-.menu.active{
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  .menu.active{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
 
-/* Menu buttons inside panel */
-.menu .menu-buttons{
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
-  margin: 120px 0 0 24px;
-}
+  /* Menu buttons inside panel */
+  .menu .menu-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 120px 0 0 24px;
+  }
 
-.menuBtn {
-  position: relative;
-  background: transparent;
-  border: none;
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  color: #FED8B1;
-  height: 24px;
-  cursor: pointer;
-  margin-top: 20px;
-  transition: color 0.3s, padding 0.3s;
-}
+  .menuBtn {
+    position: relative;
+    background: transparent;
+    border: none;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #FED8B1;
+    height: 24px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: color 0.3s, padding 0.3s;
+  }
 
-.menuBtn:hover{
-  color: #201c27;
-  padding-left: 10px;
-}
+  .menuBtn:hover{
+    color: #201c27;
+    padding-left: 10px;
+  }
 
-.menuBtn::before {
-  content: '';
-  position: absolute;
-  width: 12px;
-  height: 4px;
-  background-color: #201c27;
-  top: 50%;                 /* centered vertically */
-  left: -10px;
-  transform: translateY(-50%) scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s;
-  border-radius: 50px;
-}
-
-.menuBtn:hover::before {
-  transform: translateY(-50%) scaleX(1);
-}
-
-/* Respect reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  .menu-toggle ion-icon,
-  .menu,
-  .menuBtn,
   .menuBtn::before {
-    transition: none !important;
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 4px;
+    background-color: #201c27;
+    top: 50%;                 /* centered vertically */
+    left: -10px;
+    transform: translateY(-50%) scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+    border-radius: 50px;
+  }
+
+  .menuBtn:hover::before {
+    transform: translateY(-50%) scaleX(1);
   }
 }
+
+@media (min-width: 1000px) and (max-width: 3000px){
+  nav{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 40px 30px;
+    position: fixed;
+    top: 0; right: 0; left: 0;
+    color: #201c27;
+    background-color: transparent;
+    
+    position: fixed;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  .left-section{
+    font-size: 30px;
+    font-weight: 800;
+    font-family: "Julius Sans One", serif;
+  }
+
+
+  .right-section .navBtn{
+    display: none;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  /* -- ICON SWAP (fade instead of display) -- */
+  .menu-toggle { 
+    position: relative; 
+  }
+  .menu-toggle ion-icon{
+    position: absolute;
+    inset: 0;           /* center in the button */
+    margin: auto;
+    pointer-events: none;
+    transition: opacity .25s ease, transform .25s ease;
+  }
+
+  /* default: show menu, hide close (with animation) */
+  .menu-toggle .menu-button { 
+    opacity: 1; 
+    transform: scale(1); 
+  }
+  .menu-toggle .close-button { 
+    opacity: 0; 
+    transform: scale(.8); 
+  }
+
+  /* active: swap smoothly */
+  .menu-toggle.active .menu-button {
+    opacity: 0; 
+    transform: scale(.8); 
+  }
+  .menu-toggle.active .close-button {
+    opacity: 1; 
+    transform: scale(1); 
+  }
+
+  /* MENU PANEL */
+  .menu{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 0;
+    height: 100vh;
+    height: 100dvh;
+    width: 25vw;
+    border-radius: 0px 0px 0px 30px;
+    display: flex;
+    justify-content: center;
+    opacity: 1;
+    /* visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease; */
+  }
+  .menu.active{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  /* Menu buttons inside panel */
+  .menu .menu-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    width: 100%;
+    margin: 0px 30px 0px 0px;
+  }
+
+  .menuBtn {
+    position: relative;
+    background: transparent;
+    border: none;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #201c27;
+    /* text-shadow: 0px 0px 2px black; */
+    cursor: pointer;
+    margin-top: 40px;
+    transition: all 0.3s;
+    color: rgba(32, 28, 39, 0.7);
+  }
+
+  .menuBtn:hover{
+    color: #201c27;
+    padding-right: 10px;
+  }
+
+  .menuBtn::before {
+    content: '';
+    position: absolute;
+    right: -8px;
+    width: 12px;
+    height: 4px;
+    background-color: #201c27;
+    top: 40%;
+    transform: translateY(-50%) scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s;
+    border-radius: 50px;
+  }
+
+  .menuBtn:hover::before {
+    transform: translateY(-50%) scaleX(1);
+  }
+}
+
+
