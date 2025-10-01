@@ -43,7 +43,7 @@ body{
   text-align: center;
   width: 300px;
 }
-#about p{
+#about .about-para{
   padding: 10px 30px;
   margin-top: 30px;
   line-height: 20px;
@@ -55,4 +55,43 @@ body{
 }
 #about img{
   border: 1px solid wheat;
+}
+
+/* add certification, awards, and owner picture cards */
+
+.award-heading{
+  font-size: 30px;
+  font-weight: 800;
+  font-family: "Cormorant Garamond", serif;
+  text-align: center;
+  width: 300px;
+  margin-top: 30px;
+
+}
+.award-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+
+}
+
+.awards {
+  border: 1px solid #FED8B1;
+  padding: 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 4px;
+}
+.awards .i{
+  font-size: 32px;
+  margin: 0px 10px;
+}
+.award-para{
+  font-size: 12px;
+  width: 100px;
+  margin-top: 20px;
+  text-align: center;
 }

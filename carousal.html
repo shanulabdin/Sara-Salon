@@ -65,7 +65,7 @@
 </head>
 <body>
   <div class="wrapper">
-    <ion-icon class="i" name="chevron-back-outline"></ion-icon>
+    <ion-icon id="left" class="i" name="chevron-back-outline"></ion-icon>
     <div class="carousel">
       <img src="images/img-1.jpg" alt="img" draggable="false">
       <img src="images/img-2.jpg" alt="img" draggable="false">
@@ -73,14 +73,23 @@
       <img src="images/img-4.jpg" alt="img" draggable="false">
       <img src="images/img-5.jpg" alt="img" draggable="false">
     </div>
-    <ion-icon class="i" name="chevron-forward-outline"></ion-icon>
+    <ion-icon id="right" class="i" name="chevron-forward-outline"></ion-icon>
 
   </div>
 
   <script>
-    const carousel = document.querySelector('.carousel');
+    const carousel = document.querySelector('.carousel'),
+    firstImg = document.querySelectorAll('img')[0];
+    arrowIcons = document.querySelectorAll('.wrapper .i');
 
     let isDragStart = false, prevPageX, prevScrollLeft;
+    let firstImgWidth = firstImg.clientWidth + 14;
+
+    arrowIcons.forEach(icon => {
+      icon.addEventListener('click', () => {
+        carousel.scrollLeft += icon.id == 'left' ? -firstImgWidth : firstImgWidth;
+      })
+    });
 
     const dragStart = (e) => {
       // updating global variables value on mouse down event
