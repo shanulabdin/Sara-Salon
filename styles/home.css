@@ -19,6 +19,8 @@
   align-items: center;
   height: 50vh;
   background-color: #6F4E37;
+
+  scroll-margin-top: 50vh;
 }
 #home h1{
   font-size: 50px;
