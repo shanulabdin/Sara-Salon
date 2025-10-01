@@ -21,19 +21,34 @@ body{
   font-style: normal;
   background-color: #3d3d3d;
 }
+
+#transparent{
+  height: 30vh;
+}
+
 #footer{
   scroll-margin-top: 110px;
   font-family: "Josefin Sans", sans-serif;
   color: #201c27;
-  background-color: #EED5B6;
+  background-color: #01573d;
   padding-bottom: 40px;
-}
-
-.footer-top{
-  height: 50vh;
-}
-
-.footer-bottom{
   height: 50vh;
 
+}
+
+.instagram-content, .youtube-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 4px;
+  padding: 10px 10px 10px 10px;
+  cursor: pointer;
+}
+
+.instagram-content:hover .i,
+.instagram-content:hover .contact-type,
+.youtube-content:hover .i,
+.youtube-content:hover .contact-type {
+  color: #000000;
 }
