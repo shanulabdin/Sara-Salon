@@ -52,12 +52,16 @@ body{
   align-items: center;
   flex-direction: column;
   margin: 30px 0px 0px 0px;
+
+  border: 1px solid #01573d;
 }
 .number-content{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 10px 10px 10px 10px;
+  cursor: pointer;
 }
 .contact-methods .i{
   color: #01573d;
@@ -68,14 +72,10 @@ body{
   color: #01573d;
   padding: 4px;
   border-bottom: 1px solid #01573d;
-  cursor: pointer;
   margin-top: 10px;
-  transition: all 0.3s;
+  transition: color 0.4s ease;
 }
-.contact-methods .contact-type:hover{
-  color: #201c27;
-  border-bottom: 1px solid #201c27;
-}
+
 .contact-methods .contact-title{
   color: #6F4E37;
   margin-top: 10px;
@@ -85,7 +85,11 @@ body{
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  margin: 30px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  
+  width: 100%;
+
+  border-top: 1px solid #01573d;
 }
 .instagram-content, .youtube-content{
   display: flex;
@@ -93,4 +97,21 @@ body{
   align-items: center;
   flex-direction: column;
   margin: 4px;
+  padding: 10px 10px 10px 10px;
+  cursor: pointer;
+}
+
+.contact-methods .i,
+.contact-methods .contact-type {
+  color: #01573d;
+  transition: color 0.3s ease;
+}
+
+.number-content:hover .i,
+.number-content:hover .contact-type,
+.instagram-content:hover .i,
+.instagram-content:hover .contact-type,
+.youtube-content:hover .i,
+.youtube-content:hover .contact-type {
+  color: #000000;
 }
