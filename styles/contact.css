@@ -57,6 +57,7 @@
   width: 250px;
   color: #6F4E37;
   overflow: hidden;
+  text-decoration: none;
 }
 
 .contact-box:hover .number-content,
