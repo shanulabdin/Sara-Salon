@@ -22,3 +22,26 @@ body{
   background-color: #3d3d3d;
 }
 
+#contact{
+  scroll-margin-top: 110px;
+  font-family: "Josefin Sans", sans-serif;
+  color: #6F4E37;
+  background-color: #EED5B6;
+  padding-bottom: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#contact .makeup-img{
+  width: 100%;
+}
+
+#contact h2{
+  font-size: 50px;
+  font-weight: 100;
+  font-family: "Cormorant Garamond", serif;
+  text-align: center;
+  width: 300px;
+}
