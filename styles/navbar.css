@@ -198,20 +198,10 @@
     top: 0;
     bottom: 0;
     right: 0;
-    z-index: 0;
     height: 100vh;
     height: 100dvh;
-    width: 25vw;
-    width: 25dvw;
-    border-radius: 0px 0px 0px 30px;
     display: flex;
     justify-content: center;
-    opacity: 1;
-  }
-  .menu.active{
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
   }
 
   /* Menu buttons inside panel */
