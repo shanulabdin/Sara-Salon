@@ -21,9 +21,37 @@ body{
   font-style: normal;
   background-color: #3d3d3d;
 }
-
+/* transparent section */
 #transparent{
   height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.scrollUpBtn{
+  background: transparent;
+  font-size: 30px;
+  color: #FED8B1;
+  cursor: pointer;
+
+  border-width: 1px;
+  border-style: solid;
+  border-color: #FED8B1;
+  border-radius: 0px 0px 25px 25px;
+  padding: 10px 10px 0px 10px;
+  animation: scroll 2s infinite ease;
+}
+@keyframes scroll{
+  0%, 100%{
+    top: -32px;
+  }
+  45%{
+    top: -48px;
+  }
+  55%{
+    top: -32px;
+  }
 }
 
 #footer-top{
@@ -89,17 +117,29 @@ body{
 }
 
 
-
-
-
-
-
-
 /* bottom */
 #footer-bottom{
   font-family: "Josefin Sans", sans-serif;
+  font-size: 18px;
   color: #201c27;
   background-color: #A67B5B;
   padding: 40px 10px 40px 10px;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: start;
+}
+.footer-text{
+  margin: 10px 40px;
+  
+}
+.footer-text p{
+  margin: 5px;
+}
+.footer-text a{
+  text-decoration: none;
+  color: inherit
+}
+.footer-text .p1{
+  margin: 15px 0px;
 }
