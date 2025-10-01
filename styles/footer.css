@@ -36,7 +36,7 @@
 }
 
 .instagram-content, .facebook-content{
-  color: #201c27;
+  color: rgba(32, 28, 39, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,18 +47,18 @@
   transition: all 0.3s;
   cursor: pointer;
   position: relative;
-  transition: color 0.3s, padding 0.3s;
-
+  transition: all 0.3s;
 }
 
 .instagram-content:hover, .facebook-content:hover{
-  padding-left: 10px;
+  transform: translateY(-10px);
+  color: rgba(32, 28, 39, 1);
 }
 .instagram-content::before, .facebook-content::before{
   content: '';
   position: absolute;
   width: 80%;
-  height: 6px;
+  height: 4px;
   background-color: #201c27;
   bottom: 8px;
 
