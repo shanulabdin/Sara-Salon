@@ -163,7 +163,7 @@
     align-items: center;
     padding: 40px 30px;
     position: fixed;
-    top: 0; right: 0; left: 0;
+    top: 0; right: 0;
     color: #201c27;
     background-color: transparent;
     
@@ -186,42 +186,13 @@
     transition: opacity 0.3s ease, visibility 0.3s ease;
   }
 
-  /* -- ICON SWAP (fade instead of display) -- */
-  .menu-toggle { 
-    position: relative; 
-  }
-  .menu-toggle ion-icon{
-    position: absolute;
-    inset: 0;           /* center in the button */
-    margin: auto;
-    pointer-events: none;
-    transition: opacity .25s ease, transform .25s ease;
-  }
-
-  /* default: show menu, hide close (with animation) */
-  .menu-toggle .menu-button { 
-    opacity: 1; 
-    transform: scale(1); 
-  }
-  .menu-toggle .close-button { 
-    opacity: 0; 
-    transform: scale(.8); 
-  }
-
-  /* active: swap smoothly */
-  .menu-toggle.active .menu-button {
-    opacity: 0; 
-    transform: scale(.8); 
-  }
-  .menu-toggle.active .close-button {
-    opacity: 1; 
-    transform: scale(1); 
-  }
+  
 
   /* MENU PANEL */
   .menu{
     position: fixed;
     top: 0;
+    bottom: 0;
     right: 0;
     z-index: 0;
     height: 100vh;
