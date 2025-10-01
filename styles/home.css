@@ -7,11 +7,11 @@
   height: 50vh;
 }
 .mainImg{
-  width: auto;
   height: 110vh;
+  width: 100vw;
+  object-fit: cover;
   position: fixed;
   top: -10vh;
-  left: -12vw;
   z-index: 0;
 }
 #home{

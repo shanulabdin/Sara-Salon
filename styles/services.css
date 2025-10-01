@@ -25,11 +25,11 @@
 }
 .services-links a{
   text-decoration: none;
-  padding: 8px 4px;
+  padding: 12px 4px;
   width: 100%;
   border-bottom: 1px solid #6F4E37;
   color: #6F4E37;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
   cursor: pointer;
 
