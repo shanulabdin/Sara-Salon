@@ -1,4 +1,4 @@
-@media (min-width: 300px) and (max-width: 999px){
+@media (min-width: 0px) and (max-width: 999px){
   #contact {
     scroll-margin-top: -300px;
   }
