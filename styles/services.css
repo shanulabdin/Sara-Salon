@@ -22,3 +22,67 @@ body{
   background-color: #3d3d3d;
 }
 
+#services {
+  scroll-margin-top: 110px;
+  font-family: "Josefin Sans", sans-serif;
+  padding: 40px 10px 40px 10px;
+  background-color: #d4a97d;
+  color: #201c27;
+}
+
+#services h1{
+  font-size: 50px;
+  font-weight: 100;
+  font-family: "Cormorant Garamond", serif;
+  text-align: center;
+  width: 300px;
+}
+
+.services-links{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  margin: 10px 40px 10px 40px;
+  overflow: hidden;
+  padding: 10px 32px 0px 20px;
+}
+.services-links a{
+  text-decoration: none;
+  padding: 8px 4px;
+  width: 100%;
+  border-bottom: 1px solid #6F4E37;
+  color: #6F4E37;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+
+  position: relative;
+  transition: color 0.3s, padding 0.3s;
+}
+
+.services-links a:hover{
+  color: #201c27;
+  border-bottom: 1px solid #201c27;
+  padding-left: 10px;
+}
+.services-links a:before{
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 4px;
+  background-color: #201c27;
+  top: 50%;                 /* centered vertically */
+  left: -10px;
+  transform: translateY(-50%) scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+  border-radius: 50px;
+}
+.services-links a:hover::before{
+  transform: translateY(-50%) scaleX(1);
+}
+
+.menuBtn:hover::before {
+  transform: translateY(-50%) scaleX(1);
+}
