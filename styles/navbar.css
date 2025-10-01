@@ -1,5 +1,5 @@
 /* NAV */
-@media (min-width: 0px) and (max-width: 999px){
+@media (max-width: 999px){
   nav{
     display: flex;
     justify-content: space-between;
@@ -162,7 +162,7 @@
   }
 }
 
-@media (min-width: 1000px) and (max-width: 3000px){
+@media (min-width: 1000px){
   nav{
     display: flex;
     justify-content: space-between;
