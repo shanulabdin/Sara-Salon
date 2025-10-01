@@ -154,16 +154,23 @@
   .menuBtn:hover::before {
     transform: translateY(-50%) scaleX(1);
   }
+
+  .bookingBtn{
+    display: none;
+    visibility: hidden;
+    pointer-events: none;
+  }
 }
 
 @media (min-width: 1000px) and (max-width: 3000px){
   nav{
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     align-items: center;
+    flex-direction: column;
     padding: 40px 30px;
     position: fixed;
-    top: 0; right: 0;
+    top: 0; right: 0; bottom: 0;
     color: #201c27;
     background-color: transparent;
     
@@ -183,11 +190,8 @@
     display: none;
     visibility: hidden;
     pointer-events: none;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
   }
-
   
-
   /* MENU PANEL */
   .menu{
     position: fixed;
@@ -202,9 +206,6 @@
     display: flex;
     justify-content: center;
     opacity: 1;
-    /* visibility: hidden;
-    pointer-events: none;
-    transition: opacity 0.3s ease, visibility 0.3s ease; */
   }
   .menu.active{
     opacity: 1;
@@ -258,6 +259,34 @@
 
   .menuBtn:hover::before {
     transform: translateY(-50%) scaleX(1);
+  }
+
+
+  .bookingBtn{
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid rgba(254, 216, 177, 0.7);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgba(254, 216, 177, 0.7);
+    transition: all 0.3s;
+    font-size: 20px;
+    width: 100%;
+    background-color: transparent;
+    font-family: "Julius Sans One", serif;
+    z-index: 2;
+  }
+  .bookingBtn:hover{
+    border: 1px solid rgba(254, 216, 177, 1);
+    color: rgba(254, 216, 177, 1);
+  }
+
+  .bookingBtn .t{
+    cursor: pointer;
+    margin-top: 5px;
   }
 }
 
