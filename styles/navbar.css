@@ -202,6 +202,7 @@
     height: 100vh;
     height: 100dvh;
     width: 25vw;
+    width: 25dvw;
     border-radius: 0px 0px 0px 30px;
     display: flex;
     justify-content: center;
