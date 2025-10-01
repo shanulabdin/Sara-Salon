@@ -75,10 +75,22 @@ body{
 .contact-methods .contact-type:hover{
   color: #201c27;
   border-bottom: 1px solid #201c27;
-  font-weight: 600;
 }
 .contact-methods .contact-title{
   color: #6F4E37;
   margin-top: 10px;
 }
-
+.socials-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 30px 0px 0px 0px;
+}
+.instagram-content, .youtube-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 4px;
+}
