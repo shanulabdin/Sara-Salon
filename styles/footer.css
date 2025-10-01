@@ -23,8 +23,8 @@ body{
 }
 /* transparent section */
 #transparent{
-  height: 40vh;
-  height: 40dvh;
+  height: 30vh;
+  height: 30dvh;
   display: flex;
   justify-content: center;
   align-items: center;
