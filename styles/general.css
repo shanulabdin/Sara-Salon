@@ -1,0 +1,69 @@
+colors{
+  color: #01573d;
+  color: #8aa191;
+  color: #da9f87;
+  color: #ffe3d7;
+  color: #fffefe;
+  color: #201c27;
+  
+  color: #6F4E37;
+  color: #A67B5B;
+  color: #ECB176;
+  color: #FED8B1;
+}
+html{
+  scroll-behavior: smooth;
+}
+*{ 
+  margin: 0; 
+  padding: 0; 
+}
+@media (min-width: 300px) and (max-width: 999px){
+  .mainImg{
+    height: 110vh;
+    height: 110dvh;
+    width: 100vw;
+    object-fit: cover;
+    object-position: 50% 35%; 
+    position: fixed;
+    bottom: -10vh;
+    bottom: -10dvh;
+    z-index: 0;
+  }
+
+  #main{
+    background-color: #b9835c;
+    position: relative;
+    top: 50vh;
+    top: 50dvh;
+    left: 0;
+    right: 0;
+    height: 50vh;
+    height: 50dvh;
+  }
+}
+
+
+@media (min-width: 1000px) and (max-width: 2000px){
+  #main{
+    background-color: #b9835c;
+    position: relative;
+    top: 50vh;
+    top: 50dvh;
+    left: 0;
+    right: 0;
+    height: 50vh;
+    height: 50dvh;
+    width: 50vw;
+    width: 50dvw;
+  }
+  .mainImg{
+    height: 110vh;
+    height: 110dvh;
+    width: 100vw;
+    object-fit: cover;
+    object-position: 50% 35%; /* Updated to focus higher */
+    position: fixed;
+    z-index: 0;
+  }
+}

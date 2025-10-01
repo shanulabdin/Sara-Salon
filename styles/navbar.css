@@ -1,24 +1,3 @@
-colors{
-  color: #01573d;
-  color: #8aa191;
-  color: #da9f87;
-  color: #ffe3d7;
-  color: #fffefe;
-  color: #201c27;
-  
-  color: #6F4E37;
-  color: #A67B5B;
-  color: #ECB176;
-  color: #FED8B1;
-}
-
-
-*{ 
-  margin: 0; 
-  padding: 0; 
-}
-
-
 /* NAV */
 nav{
   display: flex;
