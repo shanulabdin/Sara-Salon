@@ -26,29 +26,80 @@ body{
   height: 30vh;
 }
 
-#footer{
-  scroll-margin-top: 110px;
+#footer-top{
   font-family: "Josefin Sans", sans-serif;
   color: #201c27;
-  background-color: #01573d;
-  padding-bottom: 40px;
-  height: 50vh;
+  background-color: #A67B5B;
+  padding: 40px 10px 40px 10px;
 
 }
 
-.instagram-content, .youtube-content{
+.socials-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0px 0px 0px;
+}
+
+.instagram-content, .facebook-content{
+  color: #201c27;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 4px;
-  padding: 10px 10px 10px 10px;
+  margin: 0px 0px;
+  padding: 10px;
+  font-size: 20px;
+  transition: all 0.3s;
   cursor: pointer;
+  position: relative;
+  transition: color 0.3s, padding 0.3s;
+
 }
 
-.instagram-content:hover .i,
-.instagram-content:hover .contact-type,
-.youtube-content:hover .i,
-.youtube-content:hover .contact-type {
-  color: #000000;
+.instagram-content:hover, .facebook-content:hover{
+  padding-left: 10px;
+}
+.instagram-content::before, .facebook-content::before{
+  content: '';
+  position: absolute;
+  width: 80%;
+  height: 6px;
+  background-color: #201c27;
+  bottom: 8px;
+
+  transform-origin: left;
+  transition: transform 0.3s;
+  border-radius: 50px;
+  transform: translateY(-50%) scaleY(0);
+}
+.instagram-content:hover::before, .facebook-content:hover::before {
+  transform: translateY(-50%) scaleY(1);
+}
+
+#footer-top .username{
+  padding: 10px;
+
+}
+.instagram-content .contact-title, .facebook-content .contact-title{
+  font-size: 16px;
+}
+.instagram-content .i, .facebook-content .i{
+  font-size: 32px;
+}
+
+
+
+
+
+
+
+
+/* bottom */
+#footer-bottom{
+  font-family: "Josefin Sans", sans-serif;
+  color: #201c27;
+  background-color: #A67B5B;
+  padding: 40px 10px 40px 10px;
+
 }
