@@ -10,12 +10,12 @@
   #contact .timings{
     font-size: 18px;
   } 
-  /* .number-content .i{
-    font-size: 2px;
+  /* .location-text p{
+    font-size: 21px;
   } */
   .location-heading{
-    font-size: 30px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 800;
   }
   .location-link p{
     font-size: 20px;
@@ -39,12 +39,7 @@
   #contact .timings{
     font-size: 21px;
   } 
-  /* .number-content .i{
-    font-size: 24px;
-  } */
-  /* .location-box{
-    width: 600px;
-  } */
+
   .location-text p{
     font-size: 21px;
   }
