@@ -30,7 +30,10 @@
     margin-top: 20px;
     text-align: center;
   }
-
+  .awards .i{
+    font-size: 32px;
+    margin: 0px 10px;
+  }
 }
 @media (min-width: 1000px){
   #about {
@@ -63,6 +66,10 @@
     width: 120px;
     margin-top: 20px;
     text-align: center;
+  }
+  .awards .i{
+    font-size: 36px;
+    margin: 0px 10px;
   }
 }
 
@@ -132,9 +139,5 @@
   flex-direction: column;
   width: 100px;
 
-}
-.awards .i{
-  font-size: 32px;
-  margin: 0px 10px;
 }
 

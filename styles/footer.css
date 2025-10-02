@@ -12,14 +12,16 @@
   font-size: 30px;
   color: #FED8B1;
   cursor: pointer;
-
   border-width: 1px;
   border-style: solid;
   border-color: #FED8B1;
   border-radius: 0px 0px 25px 25px;
   padding: 10px 10px 0px 10px;
+  transition: transform 0.3s ease;
 }
-
+.scrollUpBtn:hover{
+  transform: translateY(10px);
+}
 #footer-top{
   font-family: "Josefin Sans", sans-serif;
   color: #201c27;
