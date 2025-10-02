@@ -2,10 +2,61 @@
   #contact {
     scroll-margin-top: -300px;
   }
+  #contact h2{
+    font-size: 50px;
+    width: 300px;
+
+  }
+  #contact .timings{
+    font-size: 18px;
+  } 
+  /* .number-content .i{
+    font-size: 2px;
+  } */
+  .location-heading{
+    font-size: 30px;
+    font-weight: 600;
+  }
+  .location-link p{
+    font-size: 20px;
+  }
+  .location-link .i{
+    font-size: 20px;
+  }
 }
 @media (min-width: 1000px){
   #contact {
     scroll-margin-top: -500px;
+  }
+  #contact h2{
+    font-size: 70px;
+    width: 350px;
+  
+  }
+  .contact-box{
+    font-size: 21px;
+  }
+  #contact .timings{
+    font-size: 21px;
+  } 
+  /* .number-content .i{
+    font-size: 24px;
+  } */
+  /* .location-box{
+    width: 600px;
+  } */
+  .location-text p{
+    font-size: 21px;
+  }
+  .location-heading{
+    font-size: 21px;
+    font-weight: 800;
+  }
+  .location-link p{
+    font-size: 21px;
+  }
+  .location-link .i{
+    font-size: 21px;
   }
 }
 
@@ -25,11 +76,9 @@
 }
 
 #contact h2{
-  font-size: 50px;
   font-weight: 100;
   font-family: "Cormorant Garamond", serif;
   text-align: center;
-  width: 300px;
 }
 #contact .timings{
   margin: 30px 0px 0px 0px;
@@ -38,7 +87,6 @@
   align-items: center;
   flex-direction: column;
   text-align: center;
-  font-size: 18px;
 } 
 #contact .timings p{
   margin: 10px 0px 0px 0px;
@@ -57,6 +105,7 @@
   width: 250px;
   color: #6F4E37;
   overflow: hidden;
+  text-decoration: none;
 }
 
 .contact-box:hover .number-content,
@@ -72,12 +121,10 @@
   flex-direction: column;
   color: #01573d;
   transition: all 0.3s;
-  font-size: 20px;
   width: 100%;
 }
 .number-content .i{
   margin: 0px 0px 8px 0px;
-  font-size: 20px;
   
 }
 .contact-title{
@@ -96,9 +143,6 @@
 }
 .location-heading{
   margin-top: 30px;
-  font-size: 30px;
-  font-weight: 600;
-  font-family: "Cormorant Garamond", serif;
   text-align: center;
   width: 300px;
   color: #201c27;
@@ -126,13 +170,11 @@
   color: #01573d;
   margin-left: 10px;
   transition: all 0.3s;
-  font-size: 20px;
 
 }
 .location-link .i{
   color: #01573d;
   padding-bottom: 2px;
-  font-size: 20px;
   transition: all 0.3s;
 }
 .location-box:hover,
