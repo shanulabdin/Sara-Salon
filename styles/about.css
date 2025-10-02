@@ -2,10 +2,67 @@
   #about {
     scroll-margin-top: 110px;
   }
+  #about h2{
+    font-size: 40px;
+    font-weight: 100;
+    font-family: "Cormorant Garamond", serif;
+    text-align: center;
+    width: 300px;
+  }
+  #about .about-para{
+    padding: 10px 30px;
+    margin-top: 30px;
+    line-height: 20px;
+    font-size: 15px;
+  }
+  #about .founder-name{
+    margin-top: 10px;
+
+  }
+  #about .founder-title{
+    font-size: 12px;
+    margin-top: 5px;
+
+  }
+  .award-para{
+    font-size: 12px;
+    width: 100px;
+    margin-top: 20px;
+    text-align: center;
+  }
+
 }
 @media (min-width: 1000px){
   #about {
     scroll-margin-top: 0px;
+  }
+  #about h2{
+    font-size: 50px;
+    font-weight: 400;
+    font-family: "Cormorant Garamond", serif;
+    text-align: center;
+    width: 350px;
+  }
+  #about .about-para{
+    padding: 10px 30px;
+    margin-top: 30px;
+    line-height: 20px;
+    font-size: 18px;
+  }
+  #about .founder-name{
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  #about .founder-title{
+    font-size: 15px;
+    margin-top: 5px;
+
+  }
+  .award-para{
+    font-size: 15px;
+    width: 120px;
+    margin-top: 20px;
+    text-align: center;
   }
 }
 
@@ -22,19 +79,8 @@
   align-items: center;
   flex-direction: column;
 }
-#about h2{
-  font-size: 40px;
-  font-weight: 100;
-  font-family: "Cormorant Garamond", serif;
-  text-align: center;
-  width: 300px;
-}
-#about .about-para{
-  padding: 10px 30px;
-  margin-top: 30px;
-  line-height: 20px;
-  font-size: 15px;
-}
+
+
 
 
 /* add certification, awards, and owner picture cards */
@@ -64,15 +110,7 @@
 
   border-radius: 50px;
 }
-#about .founder-name{
-  margin-top: 10px;
 
-}
-#about .founder-title{
-  font-size: 12px;
-  margin-top: 5px;
-
-}
 
 
 .award-container{
@@ -98,11 +136,5 @@
 .awards .i{
   font-size: 32px;
   margin: 0px 10px;
-}
-.award-para{
-  font-size: 12px;
-  width: 100px;
-  margin-top: 20px;
-  text-align: center;
 }
 
