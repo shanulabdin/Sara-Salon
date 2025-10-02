@@ -10,11 +10,8 @@
   scroll-margin-top: 50dvh;
 }
 #home h1{
-  font-size: 50px;
-  font-weight: 100;
   font-family: "Cormorant Garamond", serif;
   text-align: center;
-  width: 300px;
   color: #FED8B1;
 }
 
@@ -43,5 +40,20 @@
   }
   55%{
     top: -32px;
+  }
+}
+
+@media (max-width: 999px){
+  #home h1{
+    font-size: 50px;
+    font-weight: 100;
+    width: 300px;
+  }
+}
+@media (min-width: 1000px) {
+  #home h1{
+    font-size: 60px;
+    font-weight: 400;
+    width: 400px;
   }
 }
