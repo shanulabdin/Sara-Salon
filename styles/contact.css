@@ -3,16 +3,14 @@
     scroll-margin-top: -300px;
   }
   #contact h2{
-    font-size: 50px;
+    font-size: 40px;
     width: 300px;
 
   }
   #contact .timings{
     font-size: 18px;
   } 
-  /* .location-text p{
-    font-size: 21px;
-  } */
+
   .location-heading{
     font-size: 18px;
     font-weight: 800;
@@ -29,7 +27,7 @@
     scroll-margin-top: -500px;
   }
   #contact h2{
-    font-size: 70px;
+    font-size: 50px;
     width: 350px;
   
   }
@@ -72,8 +70,8 @@
 
 #contact h2{
   font-weight: 100;
-  font-family: "Cormorant Garamond", serif;
   text-align: center;
+  width: 100%;
 }
 #contact .timings{
   margin: 30px 0px 0px 0px;

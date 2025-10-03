@@ -5,13 +5,11 @@
 }
 @media (max-width: 999px){
   #carousel {
-    min-height: 50vh;
-    min-height: 50dvh;
+
   }
   #carousel h2{
     font-size: 50px;
     font-weight: 100;
-    font-family: "Cormorant Garamond", serif;
     text-align: center;
     width: 300px;
   }
@@ -29,13 +27,11 @@
 }
 @media (min-width: 1000px){
   #carousel {
-    min-height: 50vh;
-    min-height: 50dvh;
+
   }
   #carousel h2{
     font-size: 60px;
     font-weight: 400;
-    font-family: "Cormorant Garamond", serif;
     text-align: center;
     width: 350px;
   }
@@ -69,7 +65,9 @@
   display: flex;
   gap: 0.4rem;
   perspective: calc(var(--index) * 55);
-  padding-bottom: 20px;
+  padding-bottom: 10px;
+  margin-top: 80px;
+  margin-bottom: 10px;
 }
 
 .item {

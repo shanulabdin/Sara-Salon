@@ -272,8 +272,8 @@
     z-index: 2;
   }
   .bookingBtn:hover{
-    border: 2px solid rgb(124, 92, 68);
-    color: rgb(124, 92, 68);
+
+    scale: 1.03;
   }
 
   .bookingBtn .t{
