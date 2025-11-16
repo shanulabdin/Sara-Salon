@@ -134,6 +134,10 @@
   text-align: center;
   color: #6F4E37;
 }
+.location-content a {
+  text-decoration: none;
+  color: #6F4E37;
+}
 .location-heading{
   margin-top: 30px;
   text-align: center;
